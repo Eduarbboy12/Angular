@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AgmCoreModule } from '@agm/core';
 import {ResaltarDirective} from "./directives/resaltar.directive";
 import {ContarClicksDirective} from "./directives/contar-clicks.directive";
@@ -68,7 +68,8 @@ const appRoutes: Routes = [
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [LugaresServices, AutorizacionServices, MyGuardService],
   bootstrap: [AppComponent]

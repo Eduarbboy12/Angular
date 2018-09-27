@@ -18,6 +18,15 @@
     <input type="text" class="form-control" [(ngModel)]="lugar.plan" />
     <br />
     <h3>Datos de direccion</h3>
+    <div class="well">
+        <form action="">
+            <label>Buscar direccion en Google Maps</label>
+            <input type="text" [formControl]="searchField" class="form-control">
+        </form>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let result of results$ | async">{{result.formatted_address}}</li>
+        </ul>
+    </div>
     <label>Calle y numero</label>
     <input type="text" class="form-control" [(ngModel)]="lugar.calle" />
     <br />
